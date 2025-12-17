@@ -1,0 +1,1 @@
+export const metadata={title:"PrimeLogic AI"};export default function RootLayout({children}){return <html><body>{children}</body></html>}
