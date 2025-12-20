@@ -17,8 +17,12 @@ export default function Home() {
           <a href="#how" className="hover:text-slate-900">So funktioniert es</a>
           <a href="#pricing" className="hover:text-slate-900">Preise</a>
           <a
-            href="#start"
-            className="px-4 py-2 rounded-md bg-slate-900 text-white text-xs hover:bg-slate-800"
+            href="<a
+  href="https://tally.so/r/pbdPx1"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
           >
             Jetzt starten
           </a>
@@ -40,8 +44,12 @@ export default function Home() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
-                href="#start"
-                className="inline-flex items-center px-6 py-3 rounded-md bg-slate-900 text-white text-sm hover:bg-slate-800"
+                href="<a
+  href="https://tally.so/r/pbdPx1"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
               >
                 Jetzt starten
               </a>
@@ -176,8 +184,13 @@ export default function Home() {
                 </ul>
 
                 <a
-                  href="#start"
-                  className="mt-6 inline-flex items-center justify-center px-4 py-2 rounded-md border border-slate-900 text-slate-900 text-sm hover:bg-slate-900 hover:text-white"
+                  href="<a
+  href="https://tally.so/r/pbdPx1"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+            
                 >
                   Starter wählen
                 </a>
@@ -225,8 +238,12 @@ export default function Home() {
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a
-                  href="#"
-                  className="inline-flex items-center px-6 py-3 rounded-md bg-slate-900 text-white text-sm hover:bg-slate-800"
+                  href="<a
+  href="https://tally.so/r/pbdPx1"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
                 >
                   Jetzt starten
                 </a>
