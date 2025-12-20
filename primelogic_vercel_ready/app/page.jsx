@@ -1,4 +1,6 @@
 export default function Home() {
+  const START_LINK = "https://tally.so/r/pbdPx1";
+
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Header */}
@@ -9,20 +11,24 @@ export default function Home() {
           </div>
           <div>
             <div className="text-lg font-semibold tracking-tight">PrimeLogic AI</div>
-            <div className="text-[11px] text-slate-500">Automatische KI für dein Business</div>
+            <div className="text-[11px] text-slate-500">
+              Automatische KI für dein Business
+            </div>
           </div>
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-slate-600">
-          <a href="#how" className="hover:text-slate-900">So funktioniert es</a>
-          <a href="#pricing" className="hover:text-slate-900">Preise</a>
+          <a href="#how" className="hover:text-slate-900">
+            So funktioniert es
+          </a>
+          <a href="#pricing" className="hover:text-slate-900">
+            Preise
+          </a>
           <a
-            href="<a
-  href="https://tally.so/r/pbdPx1"
-  target="_blank"
-  rel="noopener noreferrer"
->
-
+            href={START_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-md bg-slate-900 text-white text-xs hover:bg-slate-800"
           >
             Jetzt starten
           </a>
@@ -34,7 +40,9 @@ export default function Home() {
         <section className="max-w-6xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-light leading-tight">
-              KI-Chatbots & Telefonassistenten<br />für Unternehmen – komplett automatisch
+              KI-Chatbots & Telefonassistenten
+              <br />
+              für Unternehmen – komplett automatisch
             </h1>
 
             <p className="mt-5 text-slate-600 text-base md:text-lg max-w-xl">
@@ -44,12 +52,10 @@ export default function Home() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
-                href="<a
-  href="https://tally.so/r/pbdPx1"
-  target="_blank"
-  rel="noopener noreferrer"
->
-
+                href={START_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-md bg-slate-900 text-white text-sm hover:bg-slate-800"
               >
                 Jetzt starten
               </a>
@@ -184,13 +190,10 @@ export default function Home() {
                 </ul>
 
                 <a
-                  href="<a
-  href="https://tally.so/r/pbdPx1"
-  target="_blank"
-  rel="noopener noreferrer"
->
-
-            
+                  href={START_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center justify-center px-4 py-2 rounded-md border border-slate-900 text-slate-900 text-sm hover:bg-slate-900 hover:text-white"
                 >
                   Starter wählen
                 </a>
@@ -216,7 +219,9 @@ export default function Home() {
                 </ul>
 
                 <a
-                  href="#start"
+                  href={START_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center justify-center px-4 py-2 rounded-md bg-white text-slate-900 text-sm hover:bg-slate-100"
                 >
                   Business wählen
@@ -238,17 +243,15 @@ export default function Home() {
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a
-                  href="<a
-  href="https://tally.so/r/pbdPx1"
-  target="_blank"
-  rel="noopener noreferrer"
->
-
+                  href={START_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 rounded-md bg-slate-900 text-white text-sm hover:bg-slate-800"
                 >
                   Jetzt starten
                 </a>
                 <span className="text-xs text-slate-500">
-                  (Button verbinden wir im nächsten Schritt mit deinem Online-Formular)
+                  Formular öffnet in einem neuen Tab.
                 </span>
               </div>
             </div>
@@ -279,3 +282,4 @@ export default function Home() {
     </div>
   );
 }
+
