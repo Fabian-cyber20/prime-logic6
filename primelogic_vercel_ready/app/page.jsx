@@ -1,285 +1,305 @@
-export default function Home() {
-  const START_LINK = "https://tally.so/r/pbdPx1";
+import Image from "next/image";
+
+export const metadata = {
+  title: "PrimeLogic AI",
+  description: "Automatisiere dein Business mit KI – Chatbot & Telefonassistent.",
+};
+
+export default function HomePage() {
+  const LOGO_SRC = "/logo.png"; // optional (liegt in /public)
+  const FORM_URL = "https://tally.so/r/pbdPx1";
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Header */}
-      <header className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center text-xs font-semibold">
-            PL
-          </div>
-          <div>
-            <div className="text-lg font-semibold tracking-tight">PrimeLogic AI</div>
-            <div className="text-[11px] text-slate-500">
-              Automatische KI für dein Business
+      <header className="sticky top-0 z-10 bg-white/80 backdrop-blur border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-3">
+            <div className="relative w-9 h-9 rounded-xl overflow-hidden bg-slate-100">
+              <Image
+                src={LOGO_SRC}
+                alt="PrimeLogic AI"
+                fill
+                className="object-contain p-1"
+                priority
+              />
             </div>
+
+            <div className="leading-tight">
+              <div className="text-sm font-semibold tracking-tight">
+                PrimeLogic AI
+              </div>
+              <div className="text-[11px] text-slate-500">
+                Automatisiere dein Business
+              </div>
+            </div>
+          </a>
+
+          <nav className="hidden md:flex items-center gap-6 text-sm text-slate-600">
+            <a href="#pakete" className="hover:text-slate-900">
+              Pakete
+            </a>
+            <a href="#ablauf" className="hover:text-slate-900">
+              Ablauf
+            </a>
+            <a href="#faq" className="hover:text-slate-900">
+              FAQ
+            </a>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={FORM_URL}
+              className="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl border border-slate-200 text-slate-700 text-sm hover:bg-slate-50 transition"
+            >
+              Kostenlos starten
+            </a>
+            <a
+              href={FORM_URL}
+              className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-slate-900 text-white text-sm hover:bg-slate-800 transition"
+            >
+              Angebot erhalten
+            </a>
           </div>
         </div>
-
-        <nav className="hidden md:flex items-center gap-6 text-sm text-slate-600">
-          <a href="#how" className="hover:text-slate-900">
-            So funktioniert es
-          </a>
-          <a href="#pricing" className="hover:text-slate-900">
-            Preise
-          </a>
-          <a
-            href={START_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-md bg-slate-900 text-white text-xs hover:bg-slate-800"
-          >
-            Jetzt starten
-          </a>
-        </nav>
       </header>
 
-      {/* Hero */}
       <main>
-        <section className="max-w-6xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-light leading-tight">
-              KI-Chatbots & Telefonassistenten
-              <br />
-              für Unternehmen – komplett automatisch
-            </h1>
-
-            <p className="mt-5 text-slate-600 text-base md:text-lg max-w-xl">
-              Beantwortet Kundenanfragen, macht Termine und entlastet dein Team.
-              Ohne Technik. Ohne Meetings. Ohne Aufwand.
-            </p>
-
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <a
-                href={START_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 rounded-md bg-slate-900 text-white text-sm hover:bg-slate-800"
-              >
-                Jetzt starten
-              </a>
-              <a href="#pricing" className="text-sm text-slate-600 hover:text-slate-900">
-                Preise ansehen
-              </a>
-            </div>
-
-            <div className="mt-6 text-xs text-slate-500">
-              Für lokale Betriebe, Dienstleister und kleine Unternehmen.
-            </div>
-          </div>
-
-          {/* Mini-Demo */}
-          <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm">
-            <div className="flex items-center justify-between text-xs text-slate-500 mb-4">
-              <span>Beispiel: automatischer Assistent</span>
-              <span className="flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                Online
-              </span>
-            </div>
-
-            <div className="space-y-3 text-sm">
-              <div className="max-w-xs rounded-md bg-white border border-slate-100 px-4 py-3">
-                👋 Hallo! Wie kann ich helfen?
-              </div>
-              <div className="max-w-xs ml-auto rounded-md bg-slate-900 text-white px-4 py-3">
-                Ich möchte einen Termin.
-              </div>
-              <div className="max-w-xs rounded-md bg-white border border-slate-100 px-4 py-3">
-                Klar. Für welchen Tag und welche Uhrzeit?
-              </div>
-            </div>
-
-            <div className="mt-5 text-[11px] text-slate-400">
-              Im echten System sind die Antworten auf dein Unternehmen angepasst.
-            </div>
-          </div>
-        </section>
-
-        {/* Problem -> Lösung */}
-        <section className="border-t border-slate-100 bg-slate-50/60">
-          <div className="max-w-6xl mx-auto px-6 py-12 md:py-14 grid md:grid-cols-2 gap-10 items-start">
+        {/* Hero */}
+        <section className="max-w-6xl mx-auto px-6 pt-14 pb-10 md:pt-20 md:pb-16">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-2xl font-light">Zu viele Anfragen. Zu wenig Zeit.</h2>
-              <p className="mt-4 text-slate-600 text-sm max-w-xl">
-                Viele Unternehmen verlieren Zeit durch wiederkehrende Fragen, Anrufe außerhalb der
-                Öffnungszeiten und Terminabstimmungen per Telefon oder E-Mail.
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-100 text-xs text-slate-600">
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-900" />
+                Keine Technik nötig • Schnell startklar
+              </div>
+
+              <h1 className="mt-6 text-4xl md:text-5xl font-light tracking-tight">
+                KI, die Anfragen beantwortet <br className="hidden md:block" />
+                und Termine macht.
+              </h1>
+
+              <p className="mt-5 text-slate-600 text-base md:text-lg max-w-xl">
+                PrimeLogic AI automatisiert Kundenfragen (Chat) – und im Business
+                Paket auch Telefonanrufe. Ideal für kleine Betriebe, Studios,
+                Praxen und lokale Services.
               </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={FORM_URL}
+                  className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-slate-900 text-white text-sm hover:bg-slate-800 transition"
+                >
+                  In 2–3 Minuten starten
+                </a>
+                <a
+                  href="#pakete"
+                  className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-200 text-slate-700 text-sm hover:bg-slate-50 transition"
+                >
+                  Pakete ansehen
+                </a>
+              </div>
+
+              <div className="mt-6 text-xs text-slate-500">
+                Du füllst nur kurz das Formular aus. Danach läuft der Prozess
+                automatisch.
+              </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-100">
-              <div className="text-sm font-medium">Die Lösung</div>
-              <p className="mt-2 text-slate-600 text-sm">
-                <span className="font-medium text-slate-900">PrimeLogic AI übernimmt das automatisch.</span>{" "}
-                Deine KI beantwortet Fragen, vereinbart Termine und ist rund um die Uhr erreichbar.
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                <li>• 24/7 erreichbar</li>
-                <li>• Weniger Anrufe und Nachrichten</li>
-                <li>• Entlastet dich und dein Team</li>
-              </ul>
+            {/* Right card (Apple-like) */}
+            <div className="rounded-3xl border border-slate-100 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)] p-6 md:p-8">
+              <div className="text-sm font-medium">Was du bekommst</div>
+
+              <div className="mt-4 grid gap-3">
+                <Feature title="Sofort nutzbar" text="Chatbot als Link oder auf deiner Website." />
+                <Feature title="Weniger Stress" text="Häufige Fragen, Preise, Öffnungszeiten – automatisch." />
+                <Feature title="Mehr Termine" text="Der Bot sammelt Infos und leitet sauber weiter." />
+                <Feature title="Optional Telefon-KI" text="Business: Anrufe annehmen, Anliegen sortieren." />
+              </div>
+
+              <div className="mt-6 rounded-2xl bg-slate-50 border border-slate-100 p-5">
+                <div className="text-xs text-slate-500">Start dauert</div>
+                <div className="mt-1 text-lg font-semibold">2–3 Minuten</div>
+                <div className="mt-3 flex gap-3">
+                  <a
+                    href={FORM_URL}
+                    className="inline-flex w-full items-center justify-center px-4 py-2 rounded-xl bg-slate-900 text-white text-sm hover:bg-slate-800 transition"
+                  >
+                    Formular öffnen
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* So funktioniert es */}
-        <section id="how" className="border-t border-slate-100">
-          <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
-            <h2 className="text-2xl font-light">So startest du – ohne Technik</h2>
-
-            <div className="mt-8 grid md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-2xl bg-white border border-slate-100">
-                <div className="text-xs text-slate-500">Schritt 1</div>
-                <div className="mt-2 text-sm font-medium">Kurzes Online-Formular ausfüllen</div>
-                <p className="mt-2 text-sm text-slate-600">
-                  Du gibst einfache Infos an: Branche, Öffnungszeiten, Leistungen, typische Fragen.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-100">
-                <div className="text-xs text-slate-500">Schritt 2</div>
-                <div className="mt-2 text-sm font-medium">Wir richten alles automatisch ein</div>
-                <p className="mt-2 text-sm text-slate-600">
-                  Dein Assistent wird auf dein Unternehmen angepasst. Du musst nichts installieren.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-100">
-                <div className="text-xs text-slate-500">Schritt 3</div>
-                <div className="mt-2 text-sm font-medium">Online gehen & nutzen</div>
-                <p className="mt-2 text-sm text-slate-600">
-                  Du bekommst einen einfachen Link (oder Code) und der Bot arbeitet für dich.
-                </p>
-              </div>
+        {/* Packages */}
+        <section id="pakete" className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+          <div className="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-light tracking-tight">
+                Pakete
+              </h2>
+              <p className="mt-2 text-slate-600">
+                Einmalige Einrichtung + monatliche Betreuung.
+              </p>
             </div>
+
+            <a
+              href={FORM_URL}
+              className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-slate-900 text-white text-sm hover:bg-slate-800 transition"
+            >
+              Jetzt starten
+            </a>
           </div>
-        </section>
 
-        {/* Preise */}
-        <section id="pricing" className="border-t border-slate-100 bg-slate-50/60">
-          <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
-            <h2 className="text-2xl font-light">Preise</h2>
-            <p className="mt-3 text-sm text-slate-600 max-w-2xl">
-              Alle Preise beinhalten Einrichtung, Betreuung und Updates. Du brauchst kein Technik-Wissen.
-              Alles läuft online.
-            </p>
-
-            <div className="mt-6 p-5 rounded-2xl bg-white border border-dashed border-slate-200">
-              <div className="text-sm font-medium">Einmalige Einrichtung</div>
-              <div className="mt-2 text-3xl font-semibold">4.999 €</div>
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
+            {/* Starter */}
+            <div className="rounded-3xl border border-slate-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.04)] p-7">
+              <div className="text-xs text-slate-500 font-medium">Starter</div>
+              <div className="mt-2 text-2xl font-semibold">Chatbot</div>
               <p className="mt-2 text-sm text-slate-600">
-                Erstellung, Anpassung auf dein Unternehmen, Verbindung zu Website/Telefon und Tests.
-              </p>
-            </div>
-
-            <div className="mt-8 grid md:grid-cols-2 gap-6">
-              {/* Starter */}
-              <div className="p-6 rounded-2xl bg-white border border-slate-100">
-                <div className="text-xs text-slate-500 font-medium">Starter – Chatbot</div>
-                <div className="mt-3 text-3xl font-semibold">
-                  299€ <span className="text-sm font-normal text-slate-500">/ Monat (Jahr 1)</span>
-                </div>
-                <div className="mt-1 text-xs text-slate-500">ab Jahr 2: 399€ / Monat</div>
-
-                <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                  <li>• KI-Chatbot für Website oder Link</li>
-                  <li>• Beantwortet Kundenfragen</li>
-                  <li>• Terminvereinbarung</li>
-                  <li>• Betreuung & Updates</li>
-                </ul>
-
-                <a
-                  href={START_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center justify-center px-4 py-2 rounded-md border border-slate-900 text-slate-900 text-sm hover:bg-slate-900 hover:text-white"
-                >
-                  Starter wählen
-                </a>
-              </div>
-
-              {/* Business */}
-              <div className="p-6 rounded-2xl bg-slate-900 text-white border-2 border-slate-900 relative overflow-hidden">
-                <div className="absolute top-3 right-4 text-[10px] uppercase tracking-[0.15em] text-slate-300">
-                  Beliebt
-                </div>
-
-                <div className="text-xs text-slate-200 font-medium">Business – Chatbot + Telefon</div>
-                <div className="mt-3 text-3xl font-semibold">
-                  399€ <span className="text-sm font-normal text-slate-300">/ Monat (Jahr 1)</span>
-                </div>
-                <div className="mt-1 text-xs text-slate-300">ab Jahr 2: 499€ / Monat</div>
-
-                <ul className="mt-4 space-y-2 text-sm text-slate-100">
-                  <li>• Alles aus Starter</li>
-                  <li>• KI-Telefonassistent für Anrufe</li>
-                  <li>• Ideal für Betriebe mit vielen Anrufen</li>
-                  <li>• Betreuung & Optimierung</li>
-                </ul>
-
-                <a
-                  href={START_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center justify-center px-4 py-2 rounded-md bg-white text-slate-900 text-sm hover:bg-slate-100"
-                >
-                  Business wählen
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Start / CTA */}
-        <section id="start" className="border-t border-slate-100">
-          <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-2xl font-light">Starte jetzt – komplett automatisch</h2>
-              <p className="mt-3 text-sm text-slate-600">
-                Du brauchst kein Vorgespräch. Kein Verkaufsgespräch. Kein Technik-Wissen.
-                Nach dem Klick füllst du ein kurzes Formular aus – alles Weitere läuft automatisch.
+                Für Website & Kundenanfragen.
               </p>
 
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a
-                  href={START_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-md bg-slate-900 text-white text-sm hover:bg-slate-800"
-                >
-                  Jetzt starten
-                </a>
-                <span className="text-xs text-slate-500">
-                  Formular öffnet in einem neuen Tab.
-                </span>
+              <div className="mt-5 rounded-2xl bg-slate-50 border border-slate-100 p-5">
+                <div className="text-xs text-slate-500">Einrichtung</div>
+                <div className="mt-1 text-2xl font-semibold">4.999 €</div>
+                <div className="mt-3 text-xs text-slate-500">
+                  Monatlich: 299 € (Jahr 1), ab Jahr 2: 399 €
+                </div>
               </div>
-            </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-              <div className="text-sm font-medium">Was du als Nächstes bekommst</div>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                <li>• Ein kurzes Formular (1–3 Minuten)</li>
-                <li>• Bestätigung per E-Mail</li>
-                <li>• Einrichtung startet automatisch</li>
-                <li>• Du bekommst Link/Einbau-Code</li>
+              <ul className="mt-5 space-y-2 text-sm text-slate-600">
+                <li>• Chatbot als Link oder Website-Widget</li>
+                <li>• FAQ, Leistungen, Preise, Öffnungszeiten</li>
+                <li>• Lead-Erfassung (Name, E-Mail, Anliegen)</li>
               </ul>
+
+              <a
+                href={FORM_URL}
+                className="mt-7 inline-flex w-full items-center justify-center px-5 py-3 rounded-xl bg-slate-900 text-white text-sm hover:bg-slate-800 transition"
+              >
+                Starter anfragen
+              </a>
             </div>
+
+            {/* Business */}
+            <div className="rounded-3xl bg-slate-900 text-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] p-7 relative overflow-hidden">
+              <div className="absolute -top-28 -right-28 w-80 h-80 rounded-full bg-white/10 blur-2xl" />
+              <div className="absolute top-5 right-5 text-[10px] uppercase tracking-[0.15em] text-slate-300">
+                Empfehlung
+              </div>
+
+              <div className="text-xs text-slate-200 font-medium relative">
+                Business
+              </div>
+              <div className="mt-2 text-2xl font-semibold relative">
+                Chatbot + Telefon
+              </div>
+              <p className="mt-2 text-sm text-slate-200 relative">
+                Für viele Anrufe & Buchungen.
+              </p>
+
+              <div className="mt-5 rounded-2xl bg-white/10 border border-white/10 p-5 relative">
+                <div className="text-xs text-slate-200">Einrichtung</div>
+                <div className="mt-1 text-2xl font-semibold">4.999 €</div>
+                <div className="mt-3 text-xs text-slate-200">
+                  Monatlich: 399 € (Jahr 1), ab Jahr 2: 499 €
+                </div>
+              </div>
+
+              <ul className="mt-5 space-y-2 text-sm text-slate-100 relative">
+                <li>• Alles aus Starter</li>
+                <li>• Telefon-KI für Anrufe (Anliegen & Termine)</li>
+                <li>• Priorisierung & bessere Erreichbarkeit</li>
+              </ul>
+
+              <a
+                href={FORM_URL}
+                className="mt-7 inline-flex w-full items-center justify-center px-5 py-3 rounded-xl bg-white text-slate-900 text-sm hover:bg-slate-100 transition relative"
+              >
+                Business anfragen
+              </a>
+            </div>
+          </div>
+
+          <p className="mt-5 text-xs text-slate-500">
+            Hinweis: Zahlung der Einrichtung erfolgt nach dem Formular auf der
+            Zahlungsseite.
+          </p>
+        </section>
+
+        {/* Flow */}
+        <section id="ablauf" className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+          <h2 className="text-2xl md:text-3xl font-light tracking-tight">
+            Ablauf (vollautomatisch)
+          </h2>
+
+          <div className="mt-8 grid md:grid-cols-3 gap-6">
+            <Step n="1" title="Formular" text="Du beantwortest kurz ein paar Fragen (2–3 Minuten)." />
+            <Step n="2" title="Zahlung" text="Du wirst zur Zahlungsseite weitergeleitet und bezahlst die Einrichtung." />
+            <Step n="3" title="Einrichtung" text="Du bekommst automatisch die nächsten Schritte per E-Mail." />
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="border-t border-slate-100 py-6 text-xs text-slate-500">
-          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3">
-            <div>© {new Date().getFullYear()} PrimeLogic AI</div>
-            <div className="flex items-center gap-4">
-              <span>Impressum</span>
-              <span>Datenschutz</span>
-            </div>
+        {/* FAQ */}
+        <section id="faq" className="max-w-6xl mx-auto px-6 pb-16">
+          <h2 className="text-2xl md:text-3xl font-light tracking-tight">
+            FAQ
+          </h2>
+
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
+            <Faq q="Brauche ich eine Website?" a="Nein. Du kannst den Chatbot auch als Link nutzen. Website ist optional." />
+            <Faq q="Muss ich technisch etwas können?" a="Nein. Du bekommst klare Schritte. Einrichtung läuft automatisch." />
+            <Faq q="Wie schnell kann ich starten?" a="Oft am selben Tag. Du wählst im Formular deinen Startzeitpunkt." />
+            <Faq q="Wie läuft die Zahlung?" a="Nach dem Formular landest du auf der Zahlungsseite und bezahlst per PayPal/Karte." />
           </div>
-        </footer>
+
+          <div className="mt-10">
+            <a
+              href={FORM_URL}
+              className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-slate-900 text-white text-sm hover:bg-slate-800 transition"
+            >
+              Jetzt starten (2–3 Minuten)
+            </a>
+          </div>
+
+          <footer className="mt-12 text-xs text-slate-500">
+            © {new Date().getFullYear()} PrimeLogic AI
+          </footer>
+        </section>
       </main>
     </div>
   );
 }
+
+function Feature({ title, text }) {
+  return (
+    <div className="rounded-2xl border border-slate-100 bg-white p-4">
+      <div className="text-sm font-medium">{title}</div>
+      <div className="mt-1 text-sm text-slate-600">{text}</div>
+    </div>
+  );
+}
+
+function Step({ n, title, text }) {
+  return (
+    <div className="rounded-3xl border border-slate-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.04)] p-7">
+      <div className="text-xs text-slate-500 font-medium">Schritt {n}</div>
+      <div className="mt-2 text-lg font-semibold">{title}</div>
+      <div className="mt-2 text-sm text-slate-600">{text}</div>
+    </div>
+  );
+}
+
+function Faq({ q, a }) {
+  return (
+    <div className="rounded-3xl border border-slate-100 bg-white p-7">
+      <div className="text-sm font-semibold">{q}</div>
+      <div className="mt-2 text-sm text-slate-600">{a}</div>
+    </div>
+  );
+}
+
 
