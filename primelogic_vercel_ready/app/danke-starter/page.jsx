@@ -25,7 +25,7 @@ export default function DankeStarter() {
           <p>✅ Bereitstellung innerhalb von 24–48 Stunden</p>
         </div>
 
-        <a href="https://tally.so/r/RGDP6P">
+        <a href="https://tally.so/r/RGPNVQ">
           <button style={{
             padding:"16px 32px",
             fontSize:"18px",
