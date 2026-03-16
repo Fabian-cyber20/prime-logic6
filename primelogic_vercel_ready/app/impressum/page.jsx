@@ -9,8 +9,8 @@ export default function Impressum() {
       <p>
         PrimeLogic AI<br/>
         Fabian Frasch<br/>
-        [Häuserweg 7]<br/>
-        [73760] [Ostfildern]<br/>
+        Häuserweg 7<br/>
+        73760 Ostfildern<br/>
         Deutschland
       </p>
 
@@ -23,7 +23,7 @@ export default function Impressum() {
       <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
 
       <p>
-        Fabian [Frasch]<br/>
+        Fabian Frasch<br/>
         Adresse wie oben
       </p>
 
