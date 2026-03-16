@@ -16,9 +16,9 @@ export default function Datenschutz() {
 
       <p>
         PrimeLogic AI<br/>
-        Fabian [Frasch]<br/>
-        [Häuserweg 7]<br/>
-        [73760] [Ostfildern]<br/>
+        Fabian Frasch<br/>
+        Häuserweg 7<br/>
+        73760 Ostfildern<br/>
         Deutschland<br/>
         E-Mail: hello@prime-logic.de
       </p>
