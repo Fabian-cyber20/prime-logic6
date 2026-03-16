@@ -48,73 +48,118 @@ export default function HomePage() {
 
       <main>
         {/* Hero */}
-        <section className="max-w-6xl mx-auto px-6 pt-16 pb-14">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-100 text-xs text-slate-600">
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-900" />
-                Keine Technikkenntnisse erforderlich
+       <section className="relative overflow-hidden bg-white">
+  <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-slate-100/60 blur-3xl" />
+    <div className="absolute top-[180px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-slate-50 blur-3xl" />
+  </div>
+
+  <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-20 md:pt-28 md:pb-28 text-center">
+    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 bg-white/80 backdrop-blur text-xs text-slate-600">
+      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+      KI-Chatbots und Telefon-Assistenten für Unternehmen
+    </div>
+
+    <h1 className="mt-8 text-5xl md:text-7xl font-light tracking-tight text-slate-900 leading-[1.05]">
+      Mehr Anfragen.
+      <br />
+      Weniger Aufwand.
+    </h1>
+
+    <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-slate-600 leading-relaxed">
+      PrimeLogic AI automatisiert Ihren Kundenkontakt über Website-Chatbots und
+      Telefon-Assistenten – professionell, skalierbar und ohne zusätzlichen
+      Personalaufwand.
+    </p>
+
+    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="https://tally.so/r/pbdPx1"
+        className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-slate-900 text-white text-sm md:text-base hover:bg-slate-800 transition shadow-sm"
+      >
+        Jetzt starten
+      </a>
+
+      <a
+        href="/zahlung"
+        className="inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-slate-300 bg-white text-slate-700 text-sm md:text-base hover:bg-slate-50 transition"
+      >
+        Pakete ansehen
+      </a>
+    </div>
+
+    <div className="mt-6 text-sm text-slate-500">
+      Einrichtung ab 4.999 € · Start in wenigen Minuten
+    </div>
+
+    <div className="mt-16 max-w-5xl mx-auto">
+      <div className="rounded-[28px] border border-slate-200 bg-white/80 backdrop-blur shadow-[0_30px_80px_rgba(15,23,42,0.08)] overflow-hidden">
+        <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between text-sm">
+          <div className="flex items-center gap-3">
+            <div className="w-3 h-3 rounded-full bg-slate-200" />
+            <div className="w-3 h-3 rounded-full bg-slate-200" />
+            <div className="w-3 h-3 rounded-full bg-slate-200" />
+          </div>
+          <div className="text-slate-500">PrimeLogic AI Assistant</div>
+        </div>
+
+        <div className="grid md:grid-cols-2">
+          <div className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-slate-100 text-left">
+            <div className="text-sm text-slate-500 mb-4">Website-Chatbot</div>
+
+            <div className="space-y-4">
+              <div className="max-w-xs rounded-2xl bg-slate-100 px-4 py-3 text-sm text-slate-700">
+                Guten Tag. Wie kann ich Ihnen weiterhelfen?
               </div>
 
-              <h1 className="mt-6 text-4xl md:text-5xl font-light tracking-tight">
-                Automatisieren Sie Kundenanfragen <br className="hidden md:block" />
-                mit intelligenter KI.
-              </h1>
-
-              <p className="mt-5 text-slate-600 text-lg max-w-xl">
-                PrimeLogic AI übernimmt wiederkehrende Anfragen, Terminwünsche
-                und – im Business-Paket – auch Telefonanrufe.
-                <br />
-                <strong>Strukturiert. Zuverlässig. Rund um die Uhr.</strong>
-              </p>
-
-              <div className="mt-8 flex gap-3">
-                <a
-                  href={FORM_URL}
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-900 text-white text-sm hover:bg-slate-800 transition"
-                >
-                  In 2–3 Minuten starten
-                </a>
-                <a
-                  href="#pakete"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-slate-200 text-slate-700 text-sm hover:bg-slate-50 transition"
-                >
-                  Pakete ansehen
-                </a>
+              <div className="ml-auto max-w-xs rounded-2xl bg-slate-900 px-4 py-3 text-sm text-white">
+                Ich möchte einen Termin vereinbaren.
               </div>
 
-              <p className="mt-4 text-xs text-slate-500">
-                Nach dem Formular erhalten Sie automatisch alle nächsten Schritte per E-Mail.
-              </p>
-            </div>
-
-            {/* Info Card */}
-            <div className="rounded-3xl border border-slate-100 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)] p-8">
-              <h3 className="text-sm font-medium">
-                Warum PrimeLogic AI?
-              </h3>
-
-              <div className="mt-4 grid gap-3">
-                <Feature
-                  title="Sofort einsatzbereit"
-                  text="Kein IT-Aufwand. Die Einrichtung erfolgt vollständig durch uns."
-                />
-                <Feature
-                  title="Entlastung im Alltag"
-                  text="Häufige Fragen, Preise und Öffnungszeiten werden automatisch beantwortet."
-                />
-                <Feature
-                  title="Mehr qualifizierte Anfragen"
-                  text="Kunden werden strukturiert erfasst und vorbereitet."
-                />
-                <Feature
-                  title="Optional: Telefon-KI"
-                  text="Der Assistent nimmt Anrufe an und sortiert Anliegen vor."
-                />
+              <div className="max-w-sm rounded-2xl bg-slate-100 px-4 py-3 text-sm text-slate-700">
+                Gerne. Darf ich Ihnen direkt die nächsten freien Termine anzeigen?
               </div>
             </div>
           </div>
-        </section>
+
+          <div className="p-8 md:p-10 text-left">
+            <div className="text-sm text-slate-500 mb-4">Telefon-Assistent</div>
+
+            <div className="rounded-2xl bg-slate-50 border border-slate-100 p-5">
+              <div className="text-sm text-slate-900 font-medium">
+                Eingehender Anruf
+              </div>
+              <div className="mt-3 text-sm text-slate-600 leading-relaxed">
+                „Willkommen bei PrimeLogic AI. Ich bin der digitale Assistent.
+                Möchten Sie einen Termin vereinbaren oder haben Sie eine kurze
+                Frage?“
+              </div>
+
+              <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
+                <div className="rounded-xl bg-white border border-slate-200 px-4 py-3">
+                  Terminbuchung
+                </div>
+                <div className="rounded-xl bg-white border border-slate-200 px-4 py-3">
+                  Lead-Erfassung
+                </div>
+                <div className="rounded-xl bg-white border border-slate-200 px-4 py-3">
+                  FAQ-Antworten
+                </div>
+                <div className="rounded-xl bg-white border border-slate-200 px-4 py-3">
+                  Weiterleitung
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 text-xs text-slate-400">
+        Beispielhafte Darstellung. Inhalte werden individuell auf Ihr Unternehmen angepasst.
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Pakete */}
         <section id="pakete" className="max-w-6xl mx-auto px-6 py-14">
