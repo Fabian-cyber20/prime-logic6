@@ -27,7 +27,7 @@ export default function DankeBusiness() {
           <p>✅ Bereitstellung innerhalb von 24–48 Stunden</p>
         </div>
 
-        <a href="HIER_DEN_BUSINESS_TALLY_LINK_EINFUEGEN">
+        <a href="https://tally.so/r/lbrGZN">
           <button
             style={{
               padding: "16px 32px",
